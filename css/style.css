@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,400;0,500;1,500&display=swap');
+
+
+header{
+     position: relative;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.container{max-width: 1170px; margin: 0 auto; padding: 0 10px;}
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -5;
+}
+main{background-color: #fff;}
+header section{
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    animation-name: intro;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes intro{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+header section h1{
+    letter-spacing: 2px;
+    font:200 3.5em Exo;
+    white-space: nowrap;
+    color: #282828;
+    margin: 0 0 30px 0;
+}
+.play{
+    display: inline-block;
+  
+}
+.play i{
+ 
+    color: #f5f6f8;
+    background-color: #8185a3;
+    padding: 20px 20px 20px 22px;
+    font-size: .9em;
+    border-radius: 50%;
+    transition: transform .5s ease;
+}
+.play:hover i{
+    transform: rotateY(180deg) rotateX(180deg) rotate(-60deg);
+
+}
+
+.now{
+    display:block;
+    font: 400 1em Exo;
+    max-width: 190px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 18px 49px;
+    background-color: #ff6d6d;
+    border-radius: 3px;
+    margin: 39px auto 0 auto;
+}
+#design{
+width: 50%;
+padding: 180px 0 140px 0;
+}
+#design h2, #features h2,#notebook h2,#features__two h2, #features__three h2{
+    letter-spacing: 3px;
+    font: 500 1em Exo;
+    color: #ff6d6d;
+}
+#design h3,#features h3, #notebook h3, #features__two h3{
+    color: #282828;
+    letter-spacing: 2px;
+    font: 500 2.5em Exo;
+}
+#design h3 span, #notebook h3 span{color: #ff6d6d}
+#design p,#notebook p, #features__two p{
+    color: #282828;
+    letter-spacing: 1px;
+    font: 500 1em Exo;
+    line-height: 26px;
+}
+main > div:first-child{
+    background: url(../img/bgdesign.jpg) no-repeat right top;
+}
+#features{
+  
+    
+    background: #f6f5f3;
+    text-align: center;
+}
+#features section{position: relative;padding: 130px 0 180px 0;}
+#features section div{
+    display: flex;
+    flex-direction: row;
+    margin: 90px 0 0 0;
+}
+#features section div article{
+    padding: 0 25px;
+  margin: 0 0 30px 0;
+}
+#features section div h4{
+    color: #282828;
+    font: 500 1.3em Exo;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+}
+
+#features section div p{
+    color: #282828;
+    font: 500 1em Exo;
+    letter-spacing: 1px;
+    line-height: 26px;
+    text-align: left;
+}
+#features section div img{
+    height: 66px;
+    margin: 0 0 30px 0;
+}
+.pens{
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+.cup{
+    position: absolute;
+    right:  0;
+    bottom: 0;
+}
+.earphone{
+    position: absolute;
+    right:  0;
+    top: 0;
+}
+#notebook{
+    padding: 80px 0 50px 0;
+    background: url(../img/bgmacbook.jpg) no-repeat center/cover;
+}
+#notebook >div{
+    display: flex;
+    flex-direction: row;
+   
+}
+#notebook h3{
+    margin: 10px 0 20px 0;
+}
+
+
+
+#teams{
+    padding: 100px 0 70px 0;
+    background: url(../img/bgteams.jpg) no-repeat center/cover;
+    text-align: center;
+}
+#teams > div:last-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 110px auto 0 auto;
+}
+#teams > div:first-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+#teams h4{
+    font: 500 1.3em Exo;
+    color: #fff;
+    letter-spacing: 1px;
+    
+}
+#teams h5{
+    font: 500 1em Exo;
+    color: #ff6d6d;
+   
+}
+#teams p{
+    letter-spacing: 1px;
+    color: #aaaaad;
+    line-height: 26px;
+    font: italic 1em Exo;
+}
+#teams div article{
+   
+   
+    transition: transform 1s ease;
+    position: relative;
+    perspective: 700px;
+    margin: 0 0 20px 0;
+    
+}
+.photo img{width: 100%;}
+.photo,.text{
+    backface-visibility: hidden;
+    transition: transform 1s;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #282828;
+    box-shadow: -5px 0 20px #3a3a3a;
+}
+
+#teams div article:hover .photo{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+#teams div article:hover .text{
+    transform: rotateY(-360deg);
+    cursor: pointer;
+}
+.text{
+    transform: rotateY(-180deg);
+  
+    position: absolute;
+    height: 100%;
+    top: 0;
+    padding: 20% 0 0 0;
+    
+}
+#features__two{
+    background:#f6f5f3;
+
+}
+#features__two section{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 10px 0px 10px;
+}
+#features__two p{
+    margin: 30px 0 90px 0;
+}
+#features__two section div img{
+    width: 100%;
+}
+#features__three{
+    background-color: #323969;
+    padding: 90px 0 60px;
+    text-align: center;
+}
+#features__three h3{
+    letter-spacing: 2px;
+    color: #fff;
+    font: 500 2.5em Exo;
+}
+#features__three  div{
+   
+    margin: 50px 0 0 0;
+}
+
+#features__three div input{
+    display: inline-block;
+    background: rgba(245, 245, 243, .516);
+    padding: 18px 30px;
+    border-radius: 4px;
+    border: 0;
+    transition: box-shadow .2s linear;
+   margin: 5px 20px 0 0;
+   
+}
+#features__three div input:focus,#features__three div a:focus{
+    outline: none;
+    box-shadow: 0 5px 10px #fff;
+}
+#features__three div form a{
+    display: inline-block;
+    color: #f6f5f3;
+    font: 400 .9em Exo;
+    letter-spacing: 1px;
+    padding: 15px 90px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px #1c213c;
+    background: #ff6d6d;
+    transition: box-shadow .2s linear;
+}
+#features__three div form a:hover{
+    box-shadow: 0 5px 10px #fff;
+}
+#features__three div form span{
+    display: inline-block;
+    position: relative;
+    margin: 72px 0 0 0;
+}
+#features__three div form  span img{
+    position: absolute;
+    top: -62px;
+    left: 0;
+}
+ 
+#features__three p,#features__three p a{
+    color: #f6f5f3;
+    letter-spacing: 1px;
+    font: 400 1em Exo;
+    margin: 40px 0 0 0;
+}
+#features__three p a{
+    text-decoration: underline;
+}
+footer{
+    background: url(../img/bgfooter.jpg) right top/cover;
+    padding: 80px 0 90px 0;
+}
+footer > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer > div article{
+    margin-top:20px ;
+}
+footer > div article:first-child{
+    margin: 20px 60px 0 0;
+}
+footer > div article:nth-child(2){
+    margin: 20px 110px 0 0;
+}
+footer > div article:nth-child(3){
+    margin: 20px 100px 0 0;
+}
+footer address, footer ul li a{
+    letter-spacing: 1px;
+    font: 500 .8em Exo;
+    color: #282828;
+    line-height: 26px;
+}
+footer ul li:first-child a, footer h6{
+    letter-spacing: 1px;
+    color: #282828;
+    font: 500 1.3em Exo;
+   
+}
+footer ul li:first-child, footer h6{
+    margin: 0 0 30px 0;
+}
+footer form input{
+    background: #e8e8e8;
+    padding: 18px 28px;
+    border: 0;
+    border-radius: 4px;
+    transition: box-shadow .2s linear;
+    margin: 0 -4px 0 0;
+}
+footer form input:focus{
+    outline: none;
+    box-shadow: 0 5px 10px #ff6d6d;
+}
+footer form a i{color: #fff; font-size: 1em;}
+footer form a{
+    display: inline-block;
+    padding: 17px;
+    background: #ff6d6d;
+   
+    border-radius: 4px;
+    transition: box-shadow .2s linear;
+}
+footer form a:hover{
+    box-shadow: 0 5px 10px #ff6d6d;
+}
+
+@media only screen and (max-width:700px){
+    #notebook >div, #features section div{
+       flex-wrap: wrap;
+    }
+    .pens,.earphone{display: none;}
+    #design{width: 100%;}
+    main > div:first-child{
+        background: none;
+    }
+    header section{
+        width: 100%;
+    }
+    header section h1{
+        white-space: normal;
+        font:200 2em Exo;
+       
+    }
+    footer > div{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    footer{
+        background: none;
+    }
+    
+    footer > div{
+       align-items: center;
+    }
+    footer article{
+        text-align: center;
+        margin: 30px 0 0 0 !important;
+    }
+}
